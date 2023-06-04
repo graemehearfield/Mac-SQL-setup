@@ -1,0 +1,7 @@
+Terminal
+
+$ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=yourStrong(!)Password" -p 1433:1433 --name mssql -d mcr.microsoft.com/mssql/server:2022-latest
+
+-- Note change password and user name and SQL version (if needed)
+
+When connecting to the server in Azure Data Studio use Localhost for the server and "sa" for the username
