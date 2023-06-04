@@ -1,0 +1,19 @@
+Add database in Azure Data Studio
+
+USE master;
+GO
+
+IF NOT EXISTS (
+      SELECT name
+      FROM sys.databases
+      WHERE name = N'PortfolioProject'
+      )
+   CREATE DATABASE [PortfolioProject];
+GO
+
+IF SERVERPROPERTY('ProductVersion') > '12'
+   ALTER DATABASE [PortfolioProject] SET QUERY_STORE = ON;
+GO
+
+
+-- Note change names
